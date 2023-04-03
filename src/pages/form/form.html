@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/form.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet" />
+    <title>Form</title>
+  </head>
+  <body>
+    <section>
+      <form id="order-form">
+        <div class="personalInfo">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="4"
+            pattern="[A-Za-z]+" /><br />
+
+          <label for="surname">Surname:</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            required
+            minlength="5"
+            pattern="[A-Za-z]+" /><br />
+        </div>
+        <div class="deliveryDetails">
+          <label for="delivery-date">Delivery Date:</label>
+          <input
+            type="date"
+            id="delivery-date"
+            name="delivery-date"
+            required
+            min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" /><br />
+
+          <label for="street">Street:</label>
+          <input
+            type="text"
+            id="street"
+            name="street"
+            required
+            minlength="5"
+            pattern="[A-Za-z0-9\s]+" /><br />
+        </div>
+        <div class="adress">
+          <label for="house-number">House Number:</label>
+          <input
+            type="number"
+            id="house-number"
+            name="house-number"
+            required
+            min="1" /><br />
+
+          <label for="flat-number">Flat Number:</label>
+          <input
+            type="text"
+            id="flat-number"
+            name="flat-number"
+            required
+            pattern="[0-9]+-?[0-9]*" /><br />
+        </div>
+
+        <div class="paymentDetails">
+          <label>Payment Type:</label><br />
+          <input
+            type="radio"
+            id="cash"
+            name="payment-type"
+            value="cash"
+            required />
+          <label for="cash">Cash</label>
+          <input
+            type="radio"
+            id="card"
+            name="payment-type"
+            value="card"
+            required />
+          <label for="card">Card</label>
+        </div>
+
+        <label>Gifts:</label><br />
+        <input type="checkbox" id="gift1" name="gift1" value="pack-as-gift" />
+        <label for="gift1">Pack as a Gift</label><br />
+        <input type="checkbox" id="gift2" name="gift2" value="add-postcard" />
+        <label for="gift2">Add Postcard</label> <br />
+        <input type="checkbox" id="gift3" name="gift3" value="discount" />
+        <label for="gift3">2% Discount for Next Time</label> <br />
+        <input
+          type="checkbox"
+          id="gift4"
+          name="gift4"
+          value="branded-pen-or-pencil" />
+        <label for="gift4">Branded Pen or Pencil</label><br />
+
+        <button type="submit" id="complete-btn">Complete</button>
+      </form>
+    </section>
+    <script src="../../js/form.js"></script>
+  </body>
+</html>

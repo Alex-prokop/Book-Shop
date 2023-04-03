@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+/* ------------Header------------------------------ */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #758833;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.header-title {
+  text-align: center;
+  color: #f0f1f4;
+}
+/* ------------Catalog----------------------------- */
+
+.catalog {
+  width: 60%;
+  background-color: #f0f1f4;
+}
+.div-title-catalog {
+  margin: 20px 0;
+}
+.title-catalog,
+.title-order {
+  text-align: center;
+  color: #2c3632;
+}
+/* -------------------Card------------------------- */
+.catalogContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 400px;
+  width: 280px;
+  padding: 20px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.div-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.book-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.book-title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-align: center;
+  color: #2c3632;
+}
+
+.book-author {
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.book-price {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.book-show-more-btn,
+.book-add-to-cart-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #b3bf7d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.book-show-more-btn {
+  margin-bottom: 8px;
+}
+
+.book-add-to-cart-btn:hover,
+.book-show-more-btn:hover {
+  background-color: #758833;
+}
+
+/* -------------------Order----------------------- */
+.order {
+  padding: 0 10px;
+  width: 40%;
+  background-color: #d3d4d6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.div-title-order {
+  margin: 20px 0;
+}
+.title-order {
+  text-align: center;
+}
+.order-cart {
+  position: sticky;
+  top: 0;
+  padding: 0 30px;
+}
+.cart-container {
+  display: flex;
+  flex-direction: column;
+}
+.book-author {
+  padding: 10px 0;
+}
+.cart-container h3 {
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  border: #f8f8f5 2px solid;
+  margin-bottom: 5px;
+}
+.remove-btn {
+  float: right;
+  width: 25px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #b3bf7d;
+}
+.remove-btn:hover {
+  background-color: #758833;
+}
+
+.btn-confirm {
+  margin: 0 auto;
+}
+
+.btn-confirm a {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #b3bf7d;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-confirm a:hover {
+  background-color: #758833;
+}
+/* -----------------Foorer------------------------ */
+.footer {
+  background-color: #758833;
+  padding: 20px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.github {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-image: url('../img/github-svgrepo.svg');
+  width: 160px;
+  height: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.github a {
+  color: #fff;
+}
+
+.github img {
+  width: 50px;
+  height: 50px;
+}
+
+.rss {
+  width: 121px;
+  height: 45px;
+  background-image: url('../img/rss.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* -----------------Popup----------------------- */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.popup p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.popup button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  /* float: right; */
+}
+
+.popup button:hover {
+  background-color: #c0392b;
+}
